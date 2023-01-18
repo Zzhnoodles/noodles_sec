@@ -25,7 +25,7 @@ public class Login {
         headers.put(Start.Referer, Start.RefererArg);
         Long now = System.currentTimeMillis();
         HttpUrlConnectionUtil.getQCode(headers, "https://qr.m.jd.com/show?appid=133&size=147&t=" + now);
-//        Runtime.getRuntime().exec("cmd /c QCode.png");
+        Runtime.getRuntime().exec("open QCode.png");
         URI url = new URI("https://qr.m.jd.com/show?appid=133&size=147&t=" + now);
         Map<String, List<String>> stringListMap = new HashMap<String, List<String>>();
         stringListMap = Start.manager.get(url, requestHeaders);
